@@ -13,6 +13,12 @@ C# Tutorial
 7. Getting user input: "Console.ReadLine();"
 8. Building a calculator: Converting values
 9. Building a Mad Libs Game: Interpolation
-10. Arrays
+10. Arrays: Creating, accessing values, update and populate arrays
+11. Methods: creating them and passing values
+12. Return Statement
+13. If statements: AND "&&", OR "||", negation "!" operators, comparison operators
+14. Switch statements: cases, default, break
+15. While loops / Do-While loops
+16. 
 
 
