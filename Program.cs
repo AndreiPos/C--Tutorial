@@ -122,7 +122,6 @@ namespace C__Tutorial
             friends[1] = "Janna";
 
             luckyNumbers[2] = 100;
-
             Console.WriteLine(luckyNumbers[2]);
 
             // 11. Methods
@@ -156,10 +155,10 @@ namespace C__Tutorial
 
             Console.WriteLine(GetMax(2, 10, 6));
 
-            // 15. Switch statements
+            // 14. Switch statements
             Console.WriteLine(GetDay(2));
 
-            // 16. While loops
+            // 15. While loops
             int index = 1;
             while (index <= 5)
             {
@@ -173,6 +172,64 @@ namespace C__Tutorial
                 Console.WriteLine(index2);
                 index2++;
             } while (index <= 5);
+
+            // 16. Building a Guessing game
+            string secretWord = "giraffe";
+            string guess = "";
+            int guessCount = 0;
+            int guessLimit = 5;
+            bool outOfGuesses = false;
+
+            while(guess != secretWord && !outOfGuesses)
+            {
+                if (guessCount < guessLimit)
+                {
+                    Console.Write("Enter guess: ");
+                    guess = Console.ReadLine();
+                    guessCount++;
+                }
+                else
+                {
+                    outOfGuesses = true;
+                }
+            }
+            if (outOfGuesses)
+            {
+                Console.Write("You Lose!");
+            }
+            else
+            {
+                Console.Write("You Win!");
+            }
+
+            // 17. For loops
+            int j = 1;
+            while (j <=5)
+            {
+                Console.WriteLine(j);
+                j++;
+            }
+
+            int[] luckyNr = { 4, 8, 15, 16, 28, 48 };
+            for (int i = 1; i < luckyNr.Length; i++)
+            {
+                Console.WriteLine(luckyNumbers[i]);
+            }
+
+            // 18. Exponent method
+            Console.WriteLine(GetPow(3, 2));
+
+            // 19. 2D arrays
+            int[,] numberGrid =
+            {
+                {1, 2 },
+                {3, 4 },
+                {5, 6 },
+            };
+            Console.WriteLine(numberGrid[2, 1]);
+
+            // 20. Exception handling
+
 
             // Keep Console open
             Console.ReadLine();
@@ -230,6 +287,17 @@ namespace C__Tutorial
                     break;
             }
             return dayName;
+        }
+
+        // 18. Exponent method
+        static int GetPow(int baseNum, int powNum)
+        {
+            int result = 1;
+            for (int i = 0; i < powNum; i++)
+            {
+                result = result * baseNum;
+            }
+            return result;
         }
     }
 }
