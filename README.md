@@ -19,6 +19,10 @@ C# Tutorial
 13. If statements: AND "&&", OR "||", negation "!" operators, comparison operators
 14. Switch statements: cases, default, break
 15. While loops / Do-While loops
-16. 
+16. Building a Guessing game
+17. For loops: variable initialisation, looping through arrays
+18. Exponent method
+19. 2D arrays: "[,]"
+20. Exception handling
 
 
