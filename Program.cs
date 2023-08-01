@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -229,7 +230,69 @@ namespace C__Tutorial
             Console.WriteLine(numberGrid[2, 1]);
 
             // 20. Exception handling
+            try
+            {
+                Console.Write("Enter a number: ");
+                int number1 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter another number: ");
+                int number2 = Convert.ToInt32(Console.ReadLine());
 
+                Console.WriteLine(number1 / number2);
+            }
+            catch(DivideByZeroException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            // 21. Classes and Objects 
+            /*
+            Book book1 = new Book();
+            book1.title = "The Lord of the Rings";
+            book1.author = "Tolkein";
+            book1.pages = 1178;
+            */
+
+            // 22. Constructors
+            Book book2 = new Book("Harry Potter", "JK Rowling", 317);
+
+            Console.WriteLine(book2.title);
+
+            // 23. Object Methods
+            Student student1 = new Student("Jim", "Business", 58.8);
+            Student student2 = new Student("Pam", "Art", 79.3);
+
+            Console.WriteLine(student1.HasHonours());
+            Console.WriteLine(student2.HasHonours());
+
+            // 24. Getters and Setters
+            Movie avengers = new Movie("The Avengers", "John Whedon", "PG-13");
+            Movie shrek = new Movie("Shreck", "Adam Adamson", "PG");
+
+            Console.WriteLine(avengers.Rating);
+
+            // 25. Static Class Attributes
+            Song holiday = new Song("Holiday", "Green Day", 233);
+            Console.WriteLine(Song.songCount);
+            Song kashmir = new Song("Kashmir", "Led Zeppelin", 581);
+            Console.WriteLine(holiday.getSongCount());
+
+            Console.WriteLine(kashmir.artist);
+
+            // 26. Static Methods and Classes
+            UsefulTools.SayHi("Jake");
+
+            // 27. Inheritance
+            // Superclass
+            Chef chef = new Chef();
+            chef.MakeChicken();
+
+            // Subclass
+            ItalianChef italianChef = new ItalianChef();
+            italianChef.MakePasta();
 
             // Keep Console open
             Console.ReadLine();
